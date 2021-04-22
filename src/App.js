@@ -11,11 +11,13 @@ import {NotFound} from './pages/NotFound'
 
 function App() {
   return <>
-    <Router>
+    <Router basename='/react-food-search-spa'>
       <Header />
         <main className="container content">     
             <Switch>
-              <Route exact path="/" component={Home}/>
+              <Route exact path="/">
+                <Home />
+              </Route>
               <Route path="/about" component={About}/>
               <Route path="/contacts" component={Contact}/> 
               <Route path="/category/:name" component={Category}/> 
